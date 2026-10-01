@@ -14,5 +14,24 @@ variable "bucket_name" {
 variable "github_org" {
   type        = string
   description = "GitHub organization or username"
-  default     = "MultidisciplinaryDeepDives" #Change to your github username
+  default     = "MultidisciplinaryDeepDives@144870031" #Change to your github username
+}
+
+
+variable "db_username" {
+  description = "Master DB username"
+  type        = string
+  default     = "rockadmin"
+}
+
+variable "db_password" {
+  description = "Master DB password"
+  type        = string
+  sensitive   = true
+}
+
+variable "db_name" {
+  description = "Initial database name"
+  type        = string
+  default     = "rockofages"
 }
